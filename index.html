@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan</title>
+    <title>Undangan Pernikahan Ridhan & Nova</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,104 +12,231 @@
         }
         body {
             font-family: 'Georgia', serif;
-            color: #2c3e50;
-            background-color: #faf6f0;
-            padding: 40px 20px;
+            color: #2b2b2b;
+            background-color: #f4efe9;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1067/1200/800') center/cover no-repeat;
+            min-height: 70vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+        .hero h3 {
+            font-size: 11pt;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        .hero h1 {
+            font-size: 32pt;
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .guest-box {
+            background-color: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(5px);
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            margin-top: 20px;
+        }
+        .guest-box p {
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .guest-box h4 {
+            font-size: 15pt;
+            margin-top: 5px;
         }
         .container {
-            max-width: 600px;
-            width: 100%;
-            border: 2px solid #d4af37;
-            padding: 40px 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
+            max-width: 650px;
+            margin: -40px auto 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 40px 25px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
         }
-        .header-title {
-            font-size: 14pt;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #8b7355;
-            margin-bottom: 20px;
+        .intro-text {
+            font-size: 10.5pt;
+            color: #666;
+            margin-bottom: 30px;
         }
-        .groom-bride {
-            font-size: 26pt;
-            color: #1a252f;
-            font-family: 'Times New Roman', serif;
+        .couple-card {
             margin: 25px 0;
-            font-style: italic;
         }
-        .ampersand {
-            font-size: 20pt;
-            color: #d4af37;
-            display: block;
-            margin: 10px 0;
-        }
-        .section-title {
-            font-size: 12pt;
-            color: #555;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .event-box {
-            background-color: #fdfbf7;
-            border: 1px solid #e8e2d5;
-            padding: 20px;
-            margin: 15px auto;
-            width: 90%;
-            border-radius: 6px;
-        }
-        .event-name {
-            font-size: 14pt;
+        .couple-name {
+            font-size: 16pt;
+            color: #8c6d46;
             font-weight: bold;
-            color: #8b7355;
-            margin-bottom: 8px;
+            font-family: 'Times New Roman', serif;
         }
-        .event-details {
-            font-size: 11pt;
-            line-height: 1.6;
-            color: #444;
-        }
-        .footer-text {
-            margin-top: 40px;
+        .parents-name {
             font-size: 10pt;
+            color: #666;
+            margin-top: 5px;
+        }
+        .divider-and {
+            font-size: 22pt;
+            color: #c5a059;
             font-style: italic;
-            color: #777;
-            line-height: 1.5;
+            margin: 15px 0;
         }
         .gold-line {
             height: 1px;
-            background-color: #d4af37;
-            width: 50%;
-            margin: 20px auto;
+            background: linear-gradient(to right, transparent, #c5a059, transparent);
+            margin: 35px 0;
+        }
+        .event-section {
+            background-color: #fdfaf6;
+            border: 1px solid #ebd9c1;
+            border-radius: 10px;
+            padding: 30px 20px;
+            margin: 30px 0;
+        }
+        .event-title {
+            font-size: 15pt;
+            color: #8c6d46;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .event-detail-item {
+            margin: 12px 0;
+            font-size: 11pt;
+            color: #444;
+        }
+        .location-name {
+            font-size: 13pt;
+            font-weight: bold;
+            color: #2b2b2b;
+            margin-top: 5px;
+        }
+        .gallery-section {
+            margin: 35px 0;
+        }
+        .gallery-title {
+            font-size: 13pt;
+            color: #8c6d46;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery-img {
+            width: 48%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 10pt;
+            color: #777;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header-title">Undangan Pernikahan</div>
-        <p style="font-size: 11pt; color: #666;">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan</p>
+
+    <!-- Header Sampul -->
+    <div class="hero">
+        <h3>Undangan Pernikahan</h3>
+        <h1>Ridhan &amp; Nova</h1>
         
-        <div class="groom-bride">
-            RIDHAN HERAWAN, S.Kom.
-            <span class="ampersand">&amp;</span>
-            NOVA DESI RATNASARI, S.H.
+        <div class="guest-box">
+            <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+            <h4 id="guest-name">Tamu Undangan</h4>
+        </div>
+    </div>
+
+    <!-- Isi Undangan -->
+    <div class="container">
+        <p class="intro-text">
+            Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara resepsi pernikahan putra-putri kami:
+        </p>
+
+        <div class="couple-section">
+            <div class="couple-card">
+                <div class="couple-name">RIDHAN HERAWAN, S.Kom.</div>
+                <div class="parents-name">Putra dari Bapak Fulan &amp; Ibu Fulan (alm.)</div>
+            </div>
+
+            <div class="divider-and">&amp;</div>
+
+            <div class="couple-card">
+                <div class="couple-name">NOVA DESI RATNASARI, S.H.</div>
+                <div class="parents-name">Putri dari Bapak Fulan &amp; Ibu Fulan (alm.)</div>
+            </div>
         </div>
 
         <div class="gold-line"></div>
 
-        <div class="section-title">Rangkaian Acara</div>
+        <!-- Rangkaian Acara (Hanya Resepsi) -->
+        <div class="event-section">
+            <div class="event-title">Acara Resepsi</div>
+            <div class="event-detail-item">
+                <strong>Hari &amp; Tanggal:</strong><br>
+                Kamis, 8 Oktober 2026
+            </div>
+            <div class="event-detail-item">
+                <strong>Waktu:</strong><br>
+                Pukul 11.00 WIB s.d. 14.00 WIB
+            </div>
+            <div class="event-detail-item">
+                <strong>Lokasi Acara:</strong>
+                <div class="location-name">Rumah Makan Pawon Sae</div>
+            </div>
+        </div>
 
-        <div class="event-box">
-            <div class="event-name">Resepsi</div>
-            <div class="event-details">
-                <strong>Hari / Tanggal:</strong> Kamis, 8 Oktober 2026<br>
-                <strong>Waktu:</strong> 11.00 - 14.00 WIB<br>
+        <div class="gold-line"></div>
+
+        <!-- Dokumentasi Foto Random -->
+        <div class="gallery-section">
+            <div class="gallery-title">Dokumentasi</div>
+            <div class="gallery-grid">
+                <img class="gallery-img" src="https://picsum.photos/id/1025/600/400" alt="Foto Dokumentasi 1">
+                <img class="gallery-img" src="https://picsum.photos/id/1062/600/400" alt="Foto Dokumentasi 2">
+                <img class="gallery-img" src="https://picsum.photos/id/1059/600/400" alt="Foto Dokumentasi 3">
+                <img class="gallery-img" src="https://picsum.photos/id/1069/600/400" alt="Foto Dokumentasi 4">
+            </div>
+        </div>
+
+        <div class="gold-line"></div>
+
+        <div class="footer">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+        </div>
+    </div>
+
+    <!-- Script membaca nama tamu dari URL -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const toParam = urlParams.get('to');
+        if (toParam) {
+            document.getElementById('guest-name').innerText = decodeURIComponent(toParam);
+        }
+    </script>
+</body>
+</html>
                 <strong>Lokasi:</strong> Rumah Makan Pawon Sae
             </div>
         </div>
